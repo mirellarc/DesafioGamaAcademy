@@ -10,7 +10,7 @@ const UserSchema = new mongoose.Schema(
     address: { type: String, unique: false, required: true },
     district: { type: String, unique: false, required: true },
     city: { type: String, unique: false, required: true },
-    cep: { type: Number, unique: true, required: true },
+    cep: { type: Number, unique: false, required: true },
     telephone: { type: Number, unique: false, required: false },
     telephone2: { type: Number, unique: false, required: false },
     celphone: { type: Number, unique: false, required: false },
