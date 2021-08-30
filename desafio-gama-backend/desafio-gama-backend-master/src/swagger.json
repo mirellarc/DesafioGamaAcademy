@@ -2,8 +2,8 @@
   "openapi": "3.0.0",
 
   "info": {
-    "title": "API do projetinho massa",
-    "description": "essa é a api massa do projetinho massa",
+    "title": "API do desafio Gama Academy",
+    "description": "Desafio Gama Academy",
     "version": "0.0.1"
   },
 
@@ -17,9 +17,9 @@
   "paths": {
     "/register": {
       "post": {
-        "summary": "Cadastro de candidato",
-        "description": "Rota de cadastro de usuário, recebe: nome, genêro, email e cep",
-        "tags": ["candidato"],
+        "summary": "Cadastro de usuário",
+        "description": "Rota de cadastro de usuário, recebe: nome, cargo, data de nascimento, estado civil, genero, endereço completo, telefones, contato, email, RG, CPF, veiculo e CNH",
+        "tags": ["usuario"],
         "requestBody": {
           "content": {
             "application/json": {
@@ -28,25 +28,79 @@
                   "name": {
                     "type": "string"
                   },
+                  "jobTitle": {
+                    "type": "string"
+                  },
+                  "birthDate": {
+                    "type": "string"
+                  },
+                  "maritalStatus": {
+                    "type": "string"
+                  },
                   "gender": {
                     "type": "string"
                   },
+                  "address": {
+                    "type": "string"
+                  },
+                  "district": {
+                    "type": "string"
+                  },
+                  "city": {
+                    "type": "string"
+                  },
                   "cep": {
+                    "type": "number"
+                  },
+                  "telephone": {
+                    "type": "number"
+                  },
+                  "telephone2": {
+                    "type": "number"
+                  },
+                  "celphone": {
+                    "type": "number"
+                  },
+                  "contact": {
                     "type": "string"
                   },
                   "email": {
+                    "type": "string"
+                  },
+                  "rg": {
+                    "type": "number"
+                  },
+                  "cpf": {
+                    "type": "number"
+                  },
+                  "hasCar": {
+                    "type": "string"
+                  },
+                  "driversLicence": {
                     "type": "string"
                   }
                 }
               },
               "examples": {
-                "eu mermo": {
-                  "value": {
-                    "name": "Pedro Sato",
-                    "gender": "Masculino Cis",
-                    "cep": "00000-000",
-                    "email": "pedro.hiro@gmail.com"
-                  }
+                "value": {
+                  "name": "Jaqueline Silva",
+                  "jobTitle": "Tech Lead",
+                  "birthDate": "07-06-1986",
+                  "maritalStatus": "C",
+                  "gender": "F",
+                  "address": "Avenida dos Imarés, 000",
+                  "district": "Indianópolis",
+                  "city": "São Paulo",
+                  "cep": "04085000",
+                  "telephone": "43432",
+                  "telephone2": "4322343",
+                  "celphone": "43243243",
+                  "contact": "Jaqueline Ramos",
+                  "email": "example@example.com.br",
+                  "rg": "24444",
+                  "cpf": "58965898748",
+                  "hasCar": "N",
+                  "driversLicence": "B"
                 }
               }
             }
